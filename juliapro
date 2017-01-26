@@ -22,6 +22,7 @@ ENV["PYTHON"]=""
 ENV["JUPYTER"]=""
 
 3.
+Pkg.build("PyCall")
 Pkg.build(“IJulia”)
 
 <follow any instructions, probably ignore warnings>
@@ -38,6 +39,7 @@ METHOD B: JUNO Method
 2a. In Console do 
 ENV["PYTHON"]=""
 ENV["JUPYTER"]=""
+Pkg.build("PyCall")
 Pkg.build(“IJulia”)
 
 <follow any instructions, probably ignore warnings,  then do the following below>
