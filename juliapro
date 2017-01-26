@@ -1,0 +1,47 @@
+You can run on notebooks directly by going to
+
+juliabox.com
+
+or download JuliaPro by going to
+
+http://juliacomputing.com/products/
+
+---
+
+On MAC, notebooks are not yet pre-installed (this is coming soon)
+If you wish to use notebooks you can try two methods
+
+Method A: REPL Method
+
+1. Open the REPL (LONG PATH)
+
+/Applications/JuliaPro-0.5.0.4.app/Contents/Resources/julia/Contents/Resources/julia/bin/julia
+
+2. Avoid interfering with downloads you may already have
+ENV["PYTHON"]=""
+ENV["JUPYTER"]=""
+
+3.
+Pkg.build(“IJulia”)
+
+<follow any instructions, probably ignore warnings>
+
+4.
+using IJulia
+
+5.
+notebook()  or  notebook(dir=".") (to open in your current directory)
+
+METHOD B: JUNO Method
+
+1. open JuliaPro
+2a. In Console do 
+ENV["PYTHON"]=""
+ENV["JUPYTER"]=""
+Pkg.build(“IJulia”)
+
+<follow any instructions, probably ignore warnings,  then do the following below>
+
+
+using IJulia
+notebook(detached=true)
